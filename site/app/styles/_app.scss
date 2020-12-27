@@ -76,6 +76,10 @@ ul, li {
   max-width: 1024px;
 }
 
+.codelabs-container {
+  min-height: 50rem;
+}
+
 #banner {
   background-color: #fff;
   @include keyline-40();

@@ -96,27 +96,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <body id="app" is="body-bind" class="loading fullbleed {% if view.id != 'default' -%}view{%- endif -%}">
   <paper-header-panel id="main" mode="standard" main>
     {% raw %}
-    <div id="mainToolbar" class="paper-header">
-      <div class="site-width layout horizontal">
-        <a href="/">
-          <img src="/images/logo.png" class="logo-devs" alt="Codelabs Logo">
-        </a>
-        <div id="searchbar">
-          <paper-input-container no-label-float>
-            <paper-icon-button prefix icon="search"></paper-icon-button>
-            <label>Search</label>
-            <input is="iron-input" bind-value="{{searchVal}}" on-keydown="onSearchKeyDown">
-          </paper-input-container>
-        </div>
-      </div>
-    </div>
+    <!--<div id="mainToolbar" class="paper-header">-->
+      <!--<div class="site-width layout horizontal">-->
+        <!--<a href="/">-->
+          <!--<img src="/images/logo.png" class="logo-devs" alt="Codelabs Logo">-->
+        <!--</a>-->
+        <!--<div id="searchbar">-->
+          <!--<paper-input-container no-label-float>-->
+            <!--<paper-icon-button prefix icon="search"></paper-icon-button>-->
+            <!--<label>Search</label>-->
+            <!--<input is="iron-input" bind-value="{{searchVal}}" on-keydown="onSearchKeyDown">-->
+          <!--</paper-input-container>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
     {% endraw %}
 
     {# Event pages force down attribute. On homepage, it's applied dynamically. #}
     <header id="banner" {% if view.id != 'default' -%}down{%- else %}down$="[[_toBoolean(selectedFilter)]]"{%- endif %}>
       <div class="site-width">
         {% if view.id == 'default' %}
-        <h2 class="banner-title">Welcome to Codelabs!</h2>
+        <h2 class="banner-title">Welcome to Chrome Dev Summit Extended 2020 Chrome Hours!</h2>
         <div class="banner-description"
              data-filter-selected$="{% raw %}[[_toBoolean(selectedFilter)]]{% endraw %}">
           <p class="banner-info">
@@ -125,7 +125,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             of building a small application, or adding a new feature to an
             existing application.
             <br>
-            <a href="https://github.com/googlecodelabs/tools">Codelab tools on GitHub</a>
           </p>
         {%- else -%}
           <div class="banner-description">
@@ -142,6 +141,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </header>
 
     <main>
+      <div class="codelabs-container">
       <div id="filters" class="site-width layout horizontal center justified">
         <div id="sortby">
           <paper-tabs selected="0" noink on-iron-activate="sortBy">
@@ -233,6 +233,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <div id="loading-placeholder" class="site-width">
         Loading Codelabs, please wait...
       </div>
+      </div>
     </main>
 
     <footer id="footer">
@@ -240,25 +241,30 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <div class="link-list">
           <label>Connect</label>
           <ul>
-            <li><a href="https://www.example.com/">Example</a></li>
+            <li><a href="https://www.youtube.com/c/GDGJakarta">Youtube</a></li>
+            <li><a href="https://www.instagram.com/gdgjakarta/?hl=en">Instagram</a></li>
+            <li><a href="https://www.facebook.com/gdgjakarta/">Facebook</a></li>
           </ul>
         </div>
         <div class="link-list">
           <label>Programs</label>
           <ul>
-            <li><a href="https://www.example.com/">Example</a></li>
+            <li><a href="http://gdg.community.dev/">Google Developer Groups</a></li>
+            <li><a href="http://dsc.community.dev/">Women Techmakers</a></li>
+            <li><a href="https://www.womentechmakers.com/">Developer Student Clubs</a></li>
           </ul>
         </div>
         <div class="link-list">
-          <label>Developer Consoles</label>
+          <label>Other Codelabs</label>
           <ul>
-            <li><a href="https://www.example.com/">Example</a></li>
+            <li><a href="https://codelabs.developers.google.com/">Google Codelabs</a></li>
+            <li><a href="https://www.qwiklabs.com/">Qwiklabs</a></li>
           </ul>
         </div>
         <div class="link-list">
           <label>Explore</label>
            <ul>
-            <li><a href="https://www.example.com/">Example</a></li>
+            <li><a href="https://developer.chrome.com/devsummit/schedule/#extended">Other CDS Extended</a></li>
           </ul>
         </div>
       </div>
@@ -267,9 +273,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <div class="footerbar">
       <div class="site-width layout horizontal center justified">
         <span>
-          <a href="https://example.com">Terms</a>
+          <a href="https://developers.google.com/terms/site-terms">Terms</a>
           &nbsp; | &nbsp;
-          <a href="https://example.com">Privacy</a>
+          <a href="https://policies.google.com/privacy">Privacy</a>
         </span>
       </div>
     </div>
